@@ -1,0 +1,24 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block title %}
+Calculations
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Company Information </h1>
+
+<div class="list-group text-center">
+        <a class="list-group-item list-group-item-action flex-column align-items-start ">
+          <div class="d-flex w-100 justify-content-between">
+            <h3>{{ new_date }}{{ timeZoneCurrent }}</h3>
+            <h2 class="mb-1">{{ companyName }}</h2>
+            <h4>Symbol : {{ symbol }} </h4>
+            <h5>Current Price : {{ nowPrice }} </h5>
+            <h5>$ {{ calc }} {{ percent }}%</h5>
+          </div>
+          
+        </a>    
+      </div>
+    </div>
+{% endblock %}
